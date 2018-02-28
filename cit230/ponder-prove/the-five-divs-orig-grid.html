@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>the-five-divs-orig.html</title>
+    <style type="text/css">
+        .grid-container {
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            justify-content: center;
+            grid-gap: 30px 20%;
+            padding: 20%;
+            background-color: aqua;
+        }
+        
+        .grid-container > div {
+            padding: 20% 0%;
+            background-color: chartreuse;
+            text-align: center;
+        }
+        
+        .item3 {
+            grid-area: 1 / 2 / 3 / 3;
+            
+        }
+        
+    </style>
+
+</head>
+
+<body>
+<div class="grid-container">
+    <div id="div1">
+        this is div one
+
+    </div>
+
+    <div id="div2">
+        this is div two
+
+    </div>
+    <div class="item3" id="div3">
+        this is div three
+
+    </div>
+    <div id="div4">
+        this is div four
+
+    </div>
+    <div id="div5">
+        this is div five
+
+    </div>
+</div>
+</body>
+
+</html>
