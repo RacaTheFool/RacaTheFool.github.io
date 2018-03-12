@@ -1,7 +1,7 @@
 
             /*body {margin:0;background-image: url(../ponder-prove/images/garden.jpg);background-repeat:repeat;background-position:center top;background-attachment:fixed;  }*/ body {margin:0;}
 /*            header {background-image: url(../ponder-prove/images/stones2133.jpg);}    */
-            header img {width: 10%;}
+/*            header img {width: 10%;}*/
             nav {color:#00FF00; background-color:rgba(247,209,210,.5);border:solid thin green;text-indent:50px;} 
             nav ol {text-align:center}
             nav ol#rocks li {display:inline;padding:1em;}
@@ -60,7 +60,40 @@
             div#right-col{background-color:green;}
             aside{background-color:blue;}
             footer{background-color:#0CF;}
-            body {background-color:#DDF; border: 1px solid blue;}		 
+            body {background-color:#DDF; border: 1px solid blue;}
+
        
+
+@media screen and (max-width: 722px) {
+    div#left-col {background-color: blue;}
+    nav a {display: block; width: 100%; text-align: center;}
+    
+    main {background-color: yellow;}
+    aside {background-color: red;}
+    nav {background-color: purple;}
+
+}
+@media print {
+    nav a {font-size: .05em; font-weight: bold;}
+    div#left-col {height: 20em;}
+    main {height: 20em;}
+    aside {height: 20em;}
+    foooter {height: 20em;}
+
+}
+@media screen and (max-width: 1399px) {
+    footer a {display: inline-block; width: 100%; text-align: center; font-size: .5em;}
+}
+
+
+
+            div#left-col, main, aside {font-size: 1vw;}
+
+
+
+
+
+
+
             /*<link href="../css/w9-css.css" rel="stylesheet" type="text/css" >*/
     
