@@ -1,46 +1,48 @@
 <!DOCTYPE HTML>
 <html>
-
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>week10-ponder-prove-completed-js</title>
     <link href="../css/week10.css" rel="stylesheet" type="text/css">
-    <script>
+    <script type="text/javascript">
         function myVerify() {
             document.write("<h1>are you sure you want to submit this? if so hit the back button and then hit the submit button</h1>");
         }
-
+        
         function mySendData() {
             window.alert("This is the Send Data button and hello " + document.alertform.yourname.value + " backend code would take it from here");
         }
 
         function myEnterName() {
-            window.alert("Hello " + document.alertform.yourname.value);
+            window.alert("Hello " +
+            document.alertform.yourname.value);
         }
-
+        
         function myDisplayName() {
             window.alert("Hello " + document.alertform.yourname.value);
         }
 
         function myRollOver(obj) {
-            obj.innerHTML = "Goodbye " + document.alertform.yourname.value;
+            obj.innerHTML = "Hello " +
+            document.alertform.yourname.value;
         }
 
         function myRollOut(obj) {
-            obj.innerHTML = "Hello " + document.alertform.yourname.value;
+            obj.innerHTML = "Hello " + document.alertform.yourname.value;   
         }
 
         function myChangeFont() {
-            var x = document.getElementById("how"); // Find the element with id="how"
-            x.style.fontSize = "25px"; // Change the font size 
-            x.style.color = "#FF0000"; // Change the color
+            var x = document.getElementById("how");
+            x.style.fontSize = "25px";
+            x.style.color = "#FF0000";
         }
-
+        
         function myChangeFontBack() {
-            var x = document.getElementById("how"); // Find the element with id="how"
-            x.style.fontSize = "1em"; // Change the font size 
-            x.style.color = "#000000"; // Change the color
+        var x = document.getElementById("how"); // Find the element with id="how"
+        x.style.fontSize = "1em"; // Change the font size 
+        x.style.color = "#000000"; // Change the color            
         }
 
         function myChangeColorIn(obj) {
@@ -53,7 +55,7 @@
         function myChangeColorOut(obj) {
             obj.style.backgroundColor = "yellow";
             obj.style.color = "red";
-            obj.style.fontSize = "8px";
+            obj.style.fontSize = "8px";    
         }
 
         function myNoCopy() {
@@ -74,24 +76,24 @@
         <p class="sitebranding">for all your rock needs visit <a href="http://the-rock-market.com">the Rock Market</a></p>
         <h2>(tagline) Rock Success is in the <span class="docintro">Eyes of the Beholder &amp; Me!</span></h2>
 
-    
-    
-    
-    
+        
+        
+        
+        
     </header>
 
     <nav>
         <ol id="rocks">
-            <li>  <a href="foods-using-rocks.html" class="w3-bar-item w3-button w3-mobile">Foods Using Rocks</a></li>
-            <li> <a href="history-of-rocks.html" class="w3-bar-item w3-button w3-mobile">History of Rocks</a></li>
-            <li><a href="rock-therapy.html" class="w3-bar-item w3-button w3-mobile">Rock Therapy</a></li>
-            <li><a href="rock-clothes.html" class="w3-bar-item w3-button w3-mobile">Rock Clothes</a> </li>
-            <li><a href="rock-jewelry.html" class="w3-bar-item w3-button w3-mobile">Rock Jewelry</a> </li>
-            <li> <a href="week4-ponder-prove-anchors.html#fx" class="w3-bar-item w3-button w3-mobile">Featured Market Items</a></li>
+            <li> <a href="foods-using-rocks.html">Foods Using Rocks</a> </li>
+            <li> <a href="history-of-rocks.html">History of Rocks</a> </li>
+            <li> <a href="rock-therapy.html">Rock Therapy</a> </li>
+            <li> <a href="rock-clothes.html">Rock Clothes</a></li>
+            <li><a href="rock-jewelry.html">Rock Jewelry</a></li>
+            <li> <a href="week4-ponder-prove-anchors.html#fx">Featured Market Items</a> </li>
         </ol>
     </nav>
     <div class="flex-container">
-    <div id="left-col" class="flex-item">
+    <div id="left-col">
         <ul>
             <li> <a href="rock-users.html">Rock Users</a> </li>
             <li> <a href="the-agenda.html">Rock  Agenda</a> </li>
@@ -103,54 +105,54 @@
 
         <form name="alertform">
 
-            <label>Enter Your Full Name</label>
+            <label for="yourname">Enter Your Full Name</label>
             <br>
             <input type="text" id="yourname" name="yourname" placeholder="Please enter your full name" required>
             <input type="button" value="Go" onClick="myEnterName()">
             <br>
             <br>
 
-            <div onmouseover="myRollOver(this)" onmouseout="myRollOut(this)" style="background-color:#D94A38; width:120px; height:20px; padding:40px;">Hello</div>
+            <div "myRollOver()" "myRollOut()" style="background-color:#D94A38; width:120px; height:20px; padding:40px;">Hello</div>
             <br>
             <br>
 
             <label>Do you like this website?</label>
-            <label>Yes</label>
+            <label for="yes">Yes</label>
             <input type="radio" id="yes" name="likeit" value="Yes" checked="checked" />
-            <label>No</label>
+            <label for="no">No</label>
             <input type="radio" id="no" name="likeit" value="No">
-            <label>Not Sure</label>
+            <label for="notsure">Not Sure</label>
             <input type="radio" id="notsure" name="likeit" value="NotSure">
             <br>
             <br>
 
-            <label>Please rank how much you like the website:</label>
+            <label for="range">Please rank how much you like the website:</label>
             <input type="range" id="range" min="1" max="10" value="5">
             <br>
             <br>
 
             <label>Select your major:</label>
             <br>
-            <ul id="boxes">
+            <ul>
                 <li>
-                    <label>Computer Information Technology</label>
+                    <label for="cit">Computer Information Technology</label>
                     <input type="checkbox" id="cit" value="Computer Information Technology" checked>
                 </li>
-                
+                <br>
                 <li>
-                    <label>Web Design & Development</label>
+                    <label for="acct">Web Design & Development</label>
                     <input type="checkbox" id="acct" value="Accounting">
                 </li>
-                
+                <br>
                 <li>
-                    <label>Computer Science</label>
+                    <label for="bm">Computer Science</label>
                     <input type="checkbox" id="bm" value="Business Management">
                 </li>
+                <br>
+                <br>
             </ul>
-                <br>
-                <br>
 
-            <label>How did you find us?</label>
+            <label for="how">How did you find us?</label>
             <select id="how">
                 <option value="">--Please Select--</option>
                 <option>Google</option>
@@ -160,29 +162,29 @@
                 <option>Other</option>
             </select>
             <br>
-            <button type="button" onClick="myChangeFont()">Click for bigger font!</button>
-            <button type="button" onClick="myChangeFontBack()">Click for default font!</button>
+            <button type="button" >Click for bigger font!</button>
+            <button type="button" >Click for default font!</button>
             <br>
             <br>
 
-            <label>Your Age</label>
+            <label for="age">Your Age</label>
             <input type="number" id="age" placeholder="Please enter your age">
             <br>
             <br>
 
-            <label>Message:</label>
+            <label for="comment">Message:</label>
             <br>
-            <textarea id="comment" cols="40" rows="10" placeholder="Please type your message" onfocus="myChangeColorIn(this)" onblur="myChangeColorOut(this)" oncopy="myNoCopy()" required></textarea>
+            <textarea id="comment" cols="40" rows="10" placeholder="Please type your message" required></textarea>
             <br>
             <br>
 
-            <label>&nbsp;</label>
+            <label for="verify">&nbsp;</label>
             <input type="button" Value="Verify" onClick="myVerify()">
 
-            <label>&nbsp;</label>
+            <label for="submit">&nbsp;</label>
             <button type="submit" name="Submit" onClick="mySendData()">Submit</button>
 
-            <label>&nbsp;</label>
+            <label for="reset">&nbsp;</label>
             <input type="reset" value="Reset">
             <br>
             <br>
@@ -191,8 +193,8 @@
         </form>
     </div>
 
-        
-    <main class="flex-item">
+
+    <main>
         <p style=font-weight:bold;color:yellow;font-size:24px;>Do you love <b>rocks </b> do you?</p>
         <p> The <strong>Rock Market</strong> is an all-inclusive <em>bouquet</em> of &quot;rocks&quot; at their best. A participant can merely just dabble in any of the assorted featured gems or can completely immerse into all of the luxurious benefits from each of the market items. Whether your fancy be tasting a specialty rock food or indulging in the exquisite rock jewelry or adorning those stylish rock clothes, you will always be happy that you are considered among the &ldquo;rock elite<sup>1</sup>&rdquo; among your friends and peers. Come join and begin your journey into rock heaven! See you soon! </p>
         <hr>
@@ -202,7 +204,7 @@
         <br>
     </main>
 
-    <aside class="flex-item">
+    <aside>
         <p><a href="http://rocks-for-dummies.html">Rocks for dummies</a></p>
         <p><a href="http://rocks-for-nerds.html">Rocks for nerds</a></p>
         <p><a href="http://rocks-for-gurus.html">Rocks for gurus</a></p>
@@ -215,12 +217,12 @@
         </audio>-->
         <br>
         <br>
-        <video src="video/puppy.mp4" poster="images/puppy.jpg" width="450" height="300" preload controls loop>
+        <video src="video/puppy.mp4" poster="images/puppy.jpg" width="100%" height="300" preload controls loop>
             <p>A video of a puppy looking for rocks in the snow</p>
         </video>
         <br>
         <br>
-        <iframe width="500" height="315" src="https://www.youtube.com/embed/XGSy3_Czz8k?playlist=XGSy3_Czz8k&loop=1">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/XGSy3_Czz8k?playlist=XGSy3_Czz8k&loop=1">
         </iframe>
         <br>
         <br>

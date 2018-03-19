@@ -89,7 +89,15 @@
 
             div#left-col, main, aside {font-size: 1vw;}
 
+#panel, #flip {
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
 
+#panel {
+    display: none;
+}
 
 
 

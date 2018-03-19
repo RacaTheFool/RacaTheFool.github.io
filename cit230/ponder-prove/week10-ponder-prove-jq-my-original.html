@@ -7,7 +7,7 @@
     <title>week10-ponder-prove-completed-jq</title>
     <link href="../css/week10.css" rel="stylesheet" type="text/css">
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
 
     <script>
@@ -20,10 +20,10 @@
                 alert("Hello, this is a paragraph");
             });
 
-            $("#enterName").click(function () {
-                alert("Hello " + document.alertform.yourname.value + " please type in your fullname");
-            });
-
+           $("#enterName").click(function(){
+               alert("Hello " + document.alertform.yourname.value + " please type in your fullname");
+           });
+            
             $("#major").mouseenter(function () {
                 alert("Hello " + document.alertform.yourname.value + " make sure you select CIT!!!");
             });
@@ -74,22 +74,22 @@
         <p class="sitebranding">for all your rock needs visit <a href="http://the-rock-market.com">the Rock Market</a></p>
         <h2>(tagline) Rock Success is in the <span class="docintro">Eyes of the Beholder &amp; Me!</span></h2>
 
-    
-    
-    
-    
+        
+        
+        
+        
     </header>
-
     <nav>
         <ol id="rocks">
-            <li>  <a href="foods-using-rocks.html" class="w3-bar-item w3-button w3-mobile">Foods Using Rocks</a></li>
-            <li> <a href="history-of-rocks.html" class="w3-bar-item w3-button w3-mobile">History of Rocks</a></li>
-            <li><a href="rock-therapy.html" class="w3-bar-item w3-button w3-mobile">Rock Therapy</a></li>
-            <li><a href="rock-clothes.html" class="w3-bar-item w3-button w3-mobile">Rock Clothes</a> </li>
-            <li><a href="rock-jewelry.html" class="w3-bar-item w3-button w3-mobile">Rock Jewelry</a> </li>
-            <li> <a href="week4-ponder-prove-anchors.html#fx" class="w3-bar-item w3-button w3-mobile">Featured Market Items</a></li>
+            <li> <a href="foods-using-rocks.html">Foods Using Rocks</a> </li>
+            <li> <a href="history-of-rocks.html">History of Rocks</a> </li>
+            <li> <a href="rock-therapy.html">Rock Therapy</a> </li>
+            <li> <a href="rock-clothes.html">Rock Clothes</a></li>
+            <li><a href="rock-jewelry.html">Rock Jewelry</a></li>
+            <li> <a href="week4-ponder-prove-anchors.html#fx">Featured Market Items</a> </li>
         </ol>
     </nav>
+
     <div class="flex-container">
     <div id="left-col" class="flex-item">
         <ul>
@@ -103,7 +103,7 @@
 
         <form name="alertform">
 
-            <label>Enter Your Full Name</label>
+            <label for="yourname">Enter Your Full Name</label>
             <br>
             <input type="text" id="enterName" name="yourname" placeholder="Please enter your full name" required>
             <br>
@@ -115,16 +115,16 @@
             <br>
             <br>
             <label>Do you like this website?</label>
-            <label id="yes">Yes</label>
-            <input type="radio" name="likeit" value="Yes" checked="checked" />
-            <label>No</label>
+            <label id="yes" for="yes">Yes</label>
+            <input type="radio" id="yes" name="likeit" value="Yes" checked="checked" />
+            <label for="no">No</label>
             <input type="radio" id="no" name="likeit" value="No">
-            <label>Not Sure</label>
+            <label for="notsure">Not Sure</label>
             <input type="radio" id="notsure" name="likeit" value="NotSure">
             <br>
             <br>
 
-            <label>Please rank how much you like the website:</label>
+            <label for="range">Please rank how much you like the website:</label>
             <input type="range" id="range" min="1" max="10" value="5">
             <br>
             <br>
@@ -136,20 +136,19 @@
                     <label id="major" for="cit">Computer Information Technology</label>
                     <input type="checkbox" id="cit" value="Computer Information Technology" checked>
                 </li>
-                
+                <br>
                 <li>
                     <label for="acct">Web Design & Development</label>
                     <input type="checkbox" id="acct" value="WDD">
                 </li>
-                
+                <br>
                 <li>
                     <label for="bm">Computer Science</label>
                     <input type="checkbox" id="bm" value="CS">
                 </li>
-              
+                <br>
+                <br>
             </ul>
-            <br>
-            <br>
 
             <label for="how">How did you find us?</label>
             <select id="how">
@@ -166,25 +165,25 @@
             <br>
             <br>
 
-            <label>Your Age</label>
+            <label for="age">Your Age</label>
             <input type="number" id="age" placeholder="Please enter your age">
             <br>
             <br>
 
-            <label>Message:</label>
+            <label for="comment">Message:</label>
             <br>
             <textarea id="colorHide" cols="40" rows="10" onfocus="this.value='';this.onfocus=null" required>Please type your message</textarea>
             <br>
             <br>
 
-            <label>&nbsp;</label>
-            <button id="p30" value="Verify">Verify</button>
+            <label for="verify">&nbsp;</label>
+            <button id="p30" type="button" Value="Verify">Verify</button>
 
-            <label>&nbsp;</label>
-            <button id="p31"  value="Submit">Submit</button>
+            <label for="submit">&nbsp;</label>
+            <button id="p31" type="submit" name="Submit">Submit</button>
 
-            <label>&nbsp;</label>
-            <button id="p32"  value="Reset">Reset</button>
+            <label for="reset">&nbsp;</label>
+                <button id="p32" value="Reset">Reset</button>
             <br>
             <br>
             <button>Change the background color of all above buttons</button>
@@ -216,12 +215,12 @@
         </audio>-->
         <br>
         <br>
-        <video src="video/puppy.mp4" poster="images/puppy.jpg" width="450" height="300" preload controls loop>
+        <video src="video/puppy.mp4" poster="images/puppy.jpg" width="100%" height="300" preload controls loop>
             <p>A video of a puppy looking for rocks in the snow</p>
         </video>
         <br>
         <br>
-        <iframe width="500" height="315" src="https://www.youtube.com/embed/XGSy3_Czz8k?playlist=XGSy3_Czz8k&loop=1">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/XGSy3_Czz8k?playlist=XGSy3_Czz8k&loop=1">
         </iframe>
         <br>
         <br>
