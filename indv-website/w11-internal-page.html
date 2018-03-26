@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Business Information</title>
+    <link href="../cit230/css/indv-styles.css" rel="stylesheet">
+</head>
+
+<body>
+    
+    <header>
+        <h1>Friends and Fist-Bumps</h1>
+        <h2>Business Information</h2>
+    </header>
+    <nav class="main-nav">
+        <ol>
+            <li><a href="../index.html">Home Page</a></li>
+            <li><a href="articles-and-blogs.html">Articles and Blogs</a></li>
+            <li><a href="our-services.html">Our Services</a></li>
+            <li><a href="our-mission.html">Our Mission</a></li>
+            <li><a href="about-us-main.html">About Us</a></li>
+           
+
+        </ol>
+    </nav>
+    <main>
+        <table class="business-info">
+            <caption>Business Information</caption>
+            <tr>
+                <th colspan="5"><em>Friends and Fist-Bumps</em></th>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>42 Somewhere 2nd Left</td>
+                <td>Rexburg</td>
+                <td>Idaho</td>
+                <td>83440</td>
+            </tr>
+            <tr>
+                <th>Customer Service</th>
+                <td colspan="4"><a href="mailto:fafbcustomerservice@friendsandfistbumps.com">fafbcustomerservice@friendsandfistbumps.com</a></td>
+            </tr>
+            <tr>
+                <th>Phone Number</th>
+                <td colspan="4">(208) FRI-ENDS</td>
+            </tr>
+        </table>
+        <p>You think that we can't help you? Is that the information you are looking for? Watch the video below, and you shall have verifiable proof that we know what it means to have friends! </p>
+        <video src="videos/proof-that-i-have-friends.mp4" 
+               poster="images/proof-poster.PNG" 
+               width="400" 
+               preload
+               controls
+               loop>
+            <p>Proof that I can help you with your friend needs.</p>
+        </video>
+        <p>Disney World: The Happiest Place on Earth!!! (At least that's what they say...)</p>
+        <div id="map" style="width:50%;height:300px"></div>
+
+            <script>
+                function myMap() {
+                    var myCenter =new google.maps.LatLng(28.3852, -81.5639);
+                        var mapCanvas = document.getElementById("map");
+                            var mapOptions = {
+
+                                center: new google.maps.LatLng(28.3852, -81.5639),
+                                zoom: 9,
+                                panControl: true,
+                                zoomControl: true,
+                                mapTypeControl: true,
+                                scaleControl: true,
+                                streetViewControl: true,
+                                overviewMapControl: true,
+                                rotateControl: true
+                            };
+                    
+                    var map = new google.maps.Map(mapCanvas, mapOptions);
+                    var circle = new google.maps.Circle({
+                        center: myCenter,
+                        radius: 10000,
+                        strokeColor: "#FF00FF",
+                        strokeOpacity: 0.7,
+                        strokeWeight:2,
+                        fillColor: "#FF00FF",
+                        fillOpacity: 0.3
+                });
+                circle.setMap(map);
+                    
+                    var marker = new google.maps.Marker({position:myCenter});
+                    marker.setMap(map);
+
+                
+                google.maps.event.addListener(marker, 'click', function() {
+                        var infowindow = new google.maps.InfoWindow({
+                            content: "Disney World!!!"
+                        });
+                    infowindow.open(map,marker);
+                });
+                }
+            </script>
+
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjZGcd6Jqq6IHspONmm5KIdDpf_zhVpfk&callback=myMap"></script>
+        
+    </main>
+   
+     <nav class="aside-nav">
+        <ul class="no-borders">
+            <li class="subject"><a href="about-us-main.html">About Us</a>
+                <ul>
+                    <li><a href="business-information.html">Business Information</a></li>
+                    <li><a href="employee-information.html">Employee Information</a></li>
+                </ul>
+            </li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>Check out one of the related links below!</li>
+            <li><a href="our-mission.html">Our Mission</a></li>
+            <li><a href="our-services.html">Our Services</a></li>
+        </ul>
+    </nav>
+     <footer>
+        <p id="copyright">Friends and Fist-Bumps&copy;</p>
+    </footer>
+</body>
+</html>

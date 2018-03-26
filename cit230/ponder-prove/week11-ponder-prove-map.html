@@ -68,7 +68,7 @@
 
 
                 // Zoom to 9 when clicking on marker
-                google.maps.event.addListner(marker, 'click', function () {
+                google.maps.event.addListener(marker, 'click', function () {
                         var pos = map.getZoom();
                             map.setZoom(9);
                         map.setCenter(marker.getPosition());
@@ -84,7 +84,7 @@
         <main class="flex-item">
             <!--<h3>(the middle column)</h3>-->
             <p style=font-weight:bold;color:yellow;font-size:24px;>Do you love <b>rocks </b> do you?</p>
-            <figure><img src="images/rock-love.jpg" alt="photo of a person looking off a ship" title="enjoying computing and cruising while looking at rocks">
+            <figure ondrop="drop(event)" ondragover="allowDrop(event)"><img src="images/rock-love.jpg" alt="photo of a person looking off a ship" title="enjoying computing and cruising while looking at rocks" draggable="true" ondragstart="drag(event)" id="drag1">
             <!--                <figcaption class="firstsentence">Rocks are great to view from a ship!</figcaption>-->
             </figure>
             
@@ -97,6 +97,7 @@
             <p><a href="http://rocks-for-gurus.html">Rocks for gurus</a></p>
             <p><a href="http://rocks-for-all.html">Rocks for all</a></p>
 
+            <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>                 
 
         </aside>
     </div>
