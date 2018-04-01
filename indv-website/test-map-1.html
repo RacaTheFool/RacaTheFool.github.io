@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dubai Hotels</title>
+</head>
+
+<body onload="loadMap()">
+    <h2>Rexburg</h2>
+    <div id="map" style="width:50%; height:300px;"></div>
+    <script type="text/javascript" src="json-data.json"></script>
+
+    <script>
+        function loadMap() {
+            
+            const mapOptions = {
+                center: new google.maps.LatLng(43.822893, -111.760988),
+                zoom: 12
+            }
+            const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+            var mydata = JSON.parse(data);
+            
+           
+            for (x = 0; x < 3; x++) {
+                let marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(mydata[x].location[0], mydata[x].location[1]),
+                    title: mydata[x].name
+                })
+            }
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjZGcd6Jqq6IHspONmm5KIdDpf_zhVpfk&sensor=true"></script>
+</body>
+</html>
