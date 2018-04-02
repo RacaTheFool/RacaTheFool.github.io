@@ -46,9 +46,11 @@
     nav ol li {display: inline-block; padding: 0.5em; justify-content: center;}
     nav ol {padding: 0em;}
     .main-nav {width: auto;height: 150px;position: static;}
-    .aside-nav {width: auto; left:0%; height: auto; margin-bottom: 6%;position: static;}
-    main {width: auto; margin: auto;height: auto;}
+    .aside-nav {width: auto; left:0%; height: auto; margin-bottom: 2%;position: static; clear: left;}
+    main {width: 95.4645%; margin: auto; height: auto;}
+    .product {width: 40%; left: 30%; right: auto;}
     a:hover {font-weight: normal;}
+    footer {font-size: 6px;}
     
     
 }
