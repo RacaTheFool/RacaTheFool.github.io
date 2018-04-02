@@ -12,3 +12,7 @@ function specialRequest() {
 function purchase() {
     document.getElementById("thankYou").innerHTML = "Thank you for your purchase!";
 }
+
+function server() {
+    window.alert("We're sorry, but the server is currently down.");
+}

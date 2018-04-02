@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Hire-a-Friend</title>
     <link href="../cit230/css/indv-styles.css" rel="stylesheet">
+    <script src="functions.js"></script>
 </head>
 
 <body>
@@ -22,14 +23,37 @@
     </nav>
     <main>
         <p>Are your friends always busy? Do you lack the social skills to talk to people and make friends? Either way we would be more than happy to be your friend! Whether you just want to hang out or just practice socializing, we can meet your friendship needs.</p>
-        <p>I'll have a selection menu and purchasing options here, once I figure out how to make that kind of menu.</p>
+        <p>$10 / hour</p>
+        <label>Quantity: </label>
+        <input type="text">
+        <label>Credit/Debit: </label>
+        <input type="text">
+        <br>
+        <label>Street Address</label>
+        <input type="text">
+        <label>City</label>
+        <input type="text">
+        <label>, Idaho</label>
+        <br>
+        <br>
+        <label>Which <a href="employee-information.html">employee</a> would you prefer? </label>
+        <select id="who">
+                <option>--Please Select--</option>
+                <option>Dylan Furrows</option>
+                <option>No Preference / Surprise Me</option>
+        </select>
+        <br>
+        <br>
+         <label>I have read, and agree to, the <a href="terms-and-conditions.html">Terms and Conditions</a>.</label>
+            <input type="checkbox">
+        <button type="button" onclick="purchase()">Purchase</button>
+        <br>
+        <br>
+        <p id="thankYou"></p>
     </main>
-    <nav>
-        <p>I'll have a link to the employees page when I make the "About Us" topic page, so they can look at our employees if they want to pick a specific one.</p>
-    </nav>
     <nav class="aside-nav">
         <ul class="no-borders">
-            <li class="subject"><a href="our-services.html">Articles and Blogs</a>
+            <li class="subject"><a href="our-services.html">Our Services</a>
                 <ul>
                     <li><a href="find-a-friend.html">Find-a-Friend</a></li>
                     <li><a href="hire-a-friend.html">Hire-a-Friend</a></li>

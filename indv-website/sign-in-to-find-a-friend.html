@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Sign in to Find-a-Friend</title>
     <link href="../cit230/css/indv-styles.css" rel="stylesheet">
+    <script src="functions.js"></script>
 </head>
 
 <body>
@@ -21,11 +22,20 @@
         </ol>
     </nav>
     <main>
-        <p>I'll have a sign in here, once I figure out how to do that.</p>
+        <label>Username: </label>
+        <input type="text" id="username">
+        <br>
+        <label>Password: </label>
+        <input type="text" id="password">
+        <br>
+        <button type="button" onclick="server()">Login</button>
+        <br>
+        <br>
+        <p>Not yet a member? <a href="sign-up-for-find-a-friend.html">Sign up</a>.</p>
     </main>
     <nav class="aside-nav">
         <ul class="no-borders">
-            <li class="subject"><a href="our-services.html">Articles and Blogs</a>
+            <li class="subject"><a href="our-services.html">Our Services</a>
                 <ul>
                     <li><a href="find-a-friend.html">Find-a-Friend</a></li>
                     <li><a href="hire-a-friend.html">Hire-a-Friend</a></li>
